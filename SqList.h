@@ -4,11 +4,8 @@
  *  Created on: 2016年10月11日
  *      Author: Administrator
  */
-
 #ifndef H_SQLIST_H_
-
 #define H_SQLIST_H_
-
 #define TRUE 1
 #define true 1
 #define FALSE 0
@@ -41,6 +38,17 @@ int InitList(SqList *L) {     //初始化线性表list
 	L->listsize = LIST_INIT_SIZE;
 	return ok;
 }
+int InitListsize(SqList *L, int listsize) {     //InitList  @override
+	printf("override\n");
+	L->elem = malloc(listsize * sizeof(int));
+	printf("listsize malloc +++++++ size %d \n ", (int) L->elem);
+	if (L->elem == 0) {     //判定如果分配不成功则退出
+		exit(-1);
+	}
+	L->length = 0;
+	L->listsize = listsize;
+	return ok;
+}
 
 int isListSize(SqList *L) {     //判断 队满
 	//如果 满了  则0 否则1
@@ -58,11 +66,9 @@ int ReList(SqList *L) {     //扩充 list
 		exit(error);
 	}
 	int *q;
-
 	q = realloc(L->elem, (L->listsize + LISTINCREMENT) * sizeof(int));
 	printf("\n   this realloc +++++++ size %d \n ", (int) q);
-	if (q != null) {     //释放掉 会不会 q就访问不到了，初测可能不会
-		free(L->elem);
+	if (q != null) {
 		L->elem = q;
 		L->listsize += LISTINCREMENT;
 	}
@@ -111,11 +117,11 @@ int Compare(int *e1, int *e2) {
 int LocateElem(SqList *L, int *e) { //返回某个元素的下标
 	int i = 0;
 	for (i = 0; i < L->length; i++) { //遍历元素
-		if (Compare(&(L->elem[i]), e)) {//比较是否相等
-			return i;//相等返回
+		if (Compare(&(L->elem[i]), e)) { //比较是否相等
+			return i; //相等返回
 		}
 	}
-	return -1;//e不在L中
+	return -1; //e不在L中
 }
 int mergeList(SqList *L1, SqList *L2) { //存在e属于L2但不属于L1，则放入L1中
 	int i = 0;
@@ -130,6 +136,49 @@ int mergeList(SqList *L1, SqList *L2) { //存在e属于L2但不属于L1，则放入L1中
 		}
 	}
 	return ok;
+}
+
+void ascList(SqList *L1) {
+	int i, j, flag;
+	for (i = 0; i < L1->length - 1; i++) {
+		for (j = i; j < L1->length; j++) {
+			if (L1->elem[i] > L1->elem[j]) {
+				flag = L1->elem[i];
+				L1->elem[i] = L1->elem[j];
+				L1->elem[j] = flag;
+
+			}
+		}
+	}
+}
+
+SqList mergeListByL1ByL2(SqList *L1, SqList *L2) {//L1,L2为有序递减线性表 ，返回L3同样有序递减  数据来源 为L1和L2，不做重复处理
+	int i = 0, j = 0;
+	if (L1 == null || L2 == null) {
+		exit(error);
+	}
+	SqList *L3 = malloc(sizeof(int));	//讨厌黄色的警告
+	InitListsize(L3, L1->length + L2->length);	//重写初始化数据  L3的listsize= L1+L2
+	printf("\nL3.length  :%d\n", L3->length);
+	while (i < L1->length && j < L2->length) {
+		if (L1->elem[i] < L2->elem[j]) {	//比较两个元素 哪个小？
+			L3->elem[L3->length] = L1->elem[i];
+			L3->length++;
+			i++;
+
+		} else {
+			L3->elem[L3->length] = L2->elem[j];
+			L3->length++;
+			j++;
+		}
+	}
+	while (i < L1->length) {
+		L3->elem[L3->length++] = L1->elem[i++];
+	}
+	while (j < L2->length) {
+		L3->elem[L3->length++] = L2->elem[j++];
+	}
+	return *L3;
 }
 
 #endif /* H_SQLIST_H_ */
