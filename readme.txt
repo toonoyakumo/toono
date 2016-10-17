@@ -3,3 +3,5 @@
 3333333333333333333
 4444444444444444444 of 555555
 head.date=dev
+git checkout -b feature1
+
