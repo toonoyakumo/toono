@@ -1,12 +1,3 @@
-/*
- ============================================================================
- Name        : LinkList.c
- Author      : 
- Version     :
- Copyright   : Your copyright notice
- Description : Hello World in C, Ansi-style
- ============================================================================
- */
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -94,34 +85,35 @@ LNode * LocateElem(LinkList L, int x) {
 	return p;
 }
 
-int LinkListInsert(LinkList L, LNode *x, int n) {
+LinkList LinkListInsert(LinkList L, LNode* x, int n) {
 	//判定 插入位置n是否合法
 	LNode *p;
 		p = (LNode *) malloc(sizeof(LNode));
-	p = getElem(L, n);
+	p = GetElem(L, n-1);
 	if (!p) {
 		return false;
 	}
-	LNode *a = &p, *b = &x;
-	b->next = a->next;
-	a->next = b;
+	x->next=p->next;
+	p->next=x;
 
-	return true;
+	return L;
 }
 
 int main(void) {
 	LinkList list;
 	LNode *p;
 	p = (LNode *) malloc(sizeof(LNode));
+	LNode *q;
+	q = (LNode *) malloc(sizeof(LNode));
 	list = (LinkList) CreatList2(list);
 	outLinkList(list);
 	printf("==========================\n");
 	p = GetElem(list, 3);
 	printf("p.date=%d\n", p->data);
 	printf("=================\n");
-	p->data=1234;
-	int f=LinkListInsert(list,&p,3);
-	printf("f=%d====\n");
+	q->data=1234;
+	list=LinkListInsert(list,q,3);
+//	printf("f=%d====\n");
 	outLinkList(list);
 	printf("ok");
 
