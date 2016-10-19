@@ -34,12 +34,25 @@ typedef struct LNode {
 
 } LNode, *LinkList;
 
+LinkList CreatList1(LinkList L) {
+	int x = 0;
+	L = (LinkList) malloc(sizeof(LNode));
+	LNode *s;
+	L->next = null;
+	scanf("%d", &x);
+	while (x != 9999) {
+		s = (LNode *) malloc(sizeof(LNode));
+		s->data = x;
+		s->next = L->next;
+		L->next = s;
+		scanf("%d", &x);
+	}
+	return L;
+}
 LinkList CreatList2(LinkList L) {
-
-	int x=0;
+	int x = 0;
 	L = (LinkList) malloc(sizeof(LNode));
 	LNode *s, *r = L;
-
 	scanf("%d", &x);
 	while (x != 9999) {
 		s = (LNode *) malloc(sizeof(LNode));
@@ -50,23 +63,67 @@ LinkList CreatList2(LinkList L) {
 		scanf("%d", &x);
 	}
 	r->next = null;
-
 	return L;
 }
-void outLinkList(LinkList L){
-LNode *r=L;
-	while(r->next!=null){//因为链表赋值的时候第一个是没有date只有next的结点
-		printf("%d\t",r->next->data);
-		r=r->next;
-
+void outLinkList(LinkList L) {
+	LNode *r = L->next;
+	while (r != null) { //因为链表赋值的时候第一个是没有date只有next的结点
+		printf("%d\t", r->data);
+		r = r->next;
 	}
 	printf("\n");
 }
+LNode *GetElem(LinkList L, int n) {
+	int i = 1;
+	LNode *p = L->next;
+	if (n == 0)
+		return L;
+	if (n < 1)
+		return null;
+	while (p && i < n) {
+		p = p->next;
+		i++;
+	}
+	return p;
+}
+LNode * LocateElem(LinkList L, int x) {
+	LNode *p = L->next;
+	while (p->data != x && p) {
+		p = p->next;
+	}
+	return p;
+}
+
+int LinkListInsert(LinkList L, LNode *x, int n) {
+	//判定 插入位置n是否合法
+	LNode *p;
+		p = (LNode *) malloc(sizeof(LNode));
+	p = getElem(L, n);
+	if (!p) {
+		return false;
+	}
+	LNode *a = &p, *b = &x;
+	b->next = a->next;
+	a->next = b;
+
+	return true;
+}
+
 int main(void) {
-LinkList list;
-list=(LinkList)CreatList2(list);
-outLinkList(list);
-printf("ok");
+	LinkList list;
+	LNode *p;
+	p = (LNode *) malloc(sizeof(LNode));
+	list = (LinkList) CreatList2(list);
+	outLinkList(list);
+	printf("==========================\n");
+	p = GetElem(list, 3);
+	printf("p.date=%d\n", p->data);
+	printf("=================\n");
+	p->data=1234;
+	int f=LinkListInsert(list,&p,3);
+	printf("f=%d====\n");
+	outLinkList(list);
+	printf("ok");
 
 	return 0;
 }
