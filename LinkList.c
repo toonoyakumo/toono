@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -88,33 +87,94 @@ LNode * LocateElem(LinkList L, int x) {
 LinkList LinkListInsert(LinkList L, LNode* x, int n) {
 	//判定 插入位置n是否合法
 	LNode *p;
-		p = (LNode *) malloc(sizeof(LNode));
-	p = GetElem(L, n-1);
+	p = (LNode *) malloc(sizeof(LNode));
+	p = GetElem(L, n - 1);
 	if (!p) {
 		return false;
 	}
-	x->next=p->next;
-	p->next=x;
+	x->next = p->next;
+	p->next = x;
 
 	return L;
+}
+LinkList LinkListDelElem(LinkList L, int x) {
+	LNode *p = L->next, *q = L;
+	while (p->data != x && p) {
+		p = p->next;
+		q = q->next;
+	}
+	if (p != null) {
+
+		q->next = q->next->next;
+
+	}
+
+	return L;
+}
+LinkList LinkListDelPoint(LinkList L, int n) {
+//	int i = 0;
+	LNode *p;
+	p = (LNode *) malloc(sizeof(LNode));
+	p = GetElem(L, n - 1);
+	p->next = p->next->next;
+	return L;
+}
+
+LinkList MergeLinkList(LinkList L1, LinkList L2, LinkList L3) {
+	LNode *node1 = L1->next, *node2 = L2->next, *node3 =L3;
+	int i = 1;
+	while (node1 && node2) {
+		if (node1->data < node2->data) {
+			node3->next = node1;
+			node3 = node3->next;
+			node1 = node1->next;
+
+		} else {
+			node3->next = node2;
+			node3 = node3->next;
+			node2 = node2->next;
+		}
+	}
+//判断下
+	if (node1) {
+		node3->next = node1;
+
+	} else {
+		node3->next = node2;
+	}
+
+	return L3;
 }
 
 int main(void) {
 	LinkList list;
+	LinkList list2, list3;
 	LNode *p;
 	p = (LNode *) malloc(sizeof(LNode));
 	LNode *q;
 	q = (LNode *) malloc(sizeof(LNode));
 	list = (LinkList) CreatList2(list);
+	list2 = (LinkList) CreatList2(list2);
+	list3 = (LinkList) malloc(sizeof(LNode));
+	list3->next = null;
 	outLinkList(list);
+	outLinkList(list2);
 	printf("==========================\n");
 	p = GetElem(list, 3);
 	printf("p.date=%d\n", p->data);
 	printf("=================\n");
-	q->data=1234;
-	list=LinkListInsert(list,q,3);
-//	printf("f=%d====\n");
+	q->data = 1234;
+	list = LinkListInsert(list, q, 3);
+
 	outLinkList(list);
+	list = LinkListDelPoint(list, 5);
+	outLinkList(list);
+	list = LinkListDelElem(list, 7);
+	outLinkList(list);
+	//list3=list1 并上 list2
+	list3 = MergeLinkList(list, list2, list3);
+	printf("============list3\n");
+	outLinkList(list3);
 	printf("ok");
 
 	return 0;
