@@ -47,11 +47,14 @@ DLinkList CreatList1(DLinkList dl) {
 DNode *GetElem(DLinkList dl, int n) {
 	int i = 1;
 	DNode *p = dl->next;
-	if (n == 0)
+	if (n == 0) {
 		printf("0");
-	exit(0);
-	if (n < 1)
-		return null;
+		exit(0);
+	}
+	if (n < 1){
+		printf("no N+");
+		exit(0);
+	}
 	while (p && i < n) {
 		p = p->next;
 		i++;
@@ -120,15 +123,16 @@ int main(void) {
 	DLinkList list1;
 	DNode *a;
 	a = malloc(sizeof(DNode));
+	printf("begin\n");
 	a->data = 44;
 	list1 = malloc(sizeof(DNode));
 	list1 = CreatList2(list1);
 	outLinkList(list1);
 
-	list1 = DLinkListPointInsert(list1, 0, a);
+	list1 = DLinkListPointInsert(list1, 3, a);
 
 	outLinkList(list1);
 
-	printf("hello ");
+	printf("end \n");
 	return 0;
 }
