@@ -1,0 +1,10 @@
+.ui-body {
+    left: 1px;
+    right: -1px;
+    /*-webkit-transform: translate3d(-1px, 0, 0);*/
+    -webkit-transform: translateX(-1px);
+}
+
+.ui-body-padding {
+    display: none;
+}

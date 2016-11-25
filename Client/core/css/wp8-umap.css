@@ -1,0 +1,197 @@
+
+/*@media screen and (orientation: portrait) {
+    @-ms-viewport {
+        width: 320px;
+        height: auto;
+        user-zoom: fixed;
+        max-zoom: 1;
+        min-zoom: 1;
+    }
+}
+
+@media screen and (orientation: landscape) {
+    @-ms-viewport {
+        width: auto;
+        user-zoom: fixed;
+        max-zoom: 1;
+        min-zoom: 1;
+    }
+}*/
+
+/*���WindowsPhone viewport������������*/
+/*@media (orientation: portrait) {
+    .ui-loading {
+        bottom: -40px;
+    }
+    body > .ui-view {
+        height: 106.7%;
+    }
+    .ui-main-container {
+        height: 106.7%;
+    }
+    .ui-popup-overlay {
+        height: 106.7%;
+    }
+    .ui-hide-panel {
+        height: 106.7%;
+    }
+}*/
+
+/*WindowsPhone���붯��*/
+/*@keyframes bodyload{
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(1px);
+    }
+}*/
+
+/*body {
+    animation-duration: .6s;
+    animation-fill-mode: backwards;
+    animation-name: bodyload;
+}*/
+
+/*@keyframes rotateLoader {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
+}*/
+
+/*.ui-loader {
+    animation-duration: 1s;
+    animation-name: rotateLoader;
+    animation-iteration-count :infinite;
+    animation-timing-function:linear;
+
+    background: url("../images/loader.png") no-repeat;
+    height: 32px;
+    width: 32px;
+    left: 50%;
+    top: 50%;
+    margin: -16px -16px;
+    position: absolute;
+}*/
+
+input[type=text], input[type=password] {
+    line-height: 1.5em;
+    user-select:text;
+}
+
+/*.ui-no-scroll {
+    overflow-x: hidden;
+    overflow-y: auto;
+}*/
+
+/*.ui-loading {
+    background: rgba(128, 128, 128, .3) url("../images/loader-b.png") no-repeat center;
+}*/
+
+/**{
+    -ms-touch-action:none;
+}*/
+
+/*����ɸı�viewport��С�������slide-up��������*/
+/*@keyframes translate-up-p {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+@keyframes translate-up-p1 {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+@keyframes translate-up-l {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+@keyframes translate-up-r-p2 {
+    0% {
+        transform: translateY(-93.3%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+@keyframes translate-up-r-p1 {
+    0% {
+        transform: translateY(-93.3%);
+    }
+    100% {
+        transform: translateY(6.7%);
+    }
+}
+@keyframes translate-up-r-l {
+    0% {
+        transform: translateY(-93.3%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}*/
+
+
+/*@media (orientation: portrait) {
+    .slide-up-animation {
+        top: 100%;
+        animation-name: translate-up-p1;
+    }
+
+    .slide-up-p-animation {
+        animation-name: translate-up-p;
+    }
+
+    .slide-up-r-animation {
+        top: 100%;
+        animation-name: translate-up-r-p1;
+    }
+
+    .slide-up-r-p-animation {
+        animation-name: translate-up-r-p2;
+    }
+}*/
+
+/*@media (orientation: landscape) {
+    .slide-up-animation {
+        top: 100%;
+        animation-name: translate-up-l;
+    }
+
+    .slide-up-p-animation {
+        animation-name: translate-up-l;
+    }
+
+    .slide-up-r-animation {
+        top: 100%;
+        animation-name: translate-up-r-l;
+    }
+
+    .slide-up-r-p-animation {
+        animation-name: translate-up-r-l;
+    }
+}*/
+
+
+/*}*/
+
+.ui-body-padding {
+    display: none;
+}

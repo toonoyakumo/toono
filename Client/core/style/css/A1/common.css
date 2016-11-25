@@ -1,0 +1,672 @@
+/* common.css for style A1(红色) */
+.ui-navigator, .ui-grid-icon, .ui-li-nav.active {
+    background-image: -webkit-gradient(linear, left top, left bottom, from( #e60108), to( #b90103 ));
+    background-image: -webkit-linear-gradient( #e60108 , #b90103 );
+    background-image:    -moz-linear-gradient( #e60108 , #b90103 );
+    background-image:     -ms-linear-gradient( #e60108 , #b90103 );
+    background-image:      -o-linear-gradient( #e60108 , #b90103 );
+    background-image:         linear-gradient( #e60108 , #b90103 );
+}
+
+.ui-grid-icon {
+    position: relative;
+    display: block;
+    margin: 10px auto 5px; 
+    width: 64px; 
+    height: 64px; 
+    text-align: center;
+    text-decoration: none;
+    -webkit-border-radius: .6em;
+    -moz-border-radius: .6em;
+    border-radius: .6em;
+    -webkit-box-shadow: 0px 3px 3px gray;
+    -moz-box-shadow:  0px 3px 3px gray; 
+    box-shadow: 0px 3px 3px gray;
+}
+
+.ui-grid-icon.active {
+    background-image: -webkit-gradient(linear, left top, left bottom, from( #b90103), to( #e60108 ));
+    background-image: -webkit-linear-gradient( #b90103 , #e60108 );
+    background-image:    -moz-linear-gradient( #b90103 , #e60108 );
+    background-image:     -ms-linear-gradient( #b90103 , #e60108 );
+    background-image:      -o-linear-gradient( #b90103 , #e60108 );
+    background-image:         linear-gradient( #b90103 , #e60108 );
+}
+
+.ui-grid-icon>* {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-position: 50% 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.ui-icon-sw {
+    background-image: url("../../images/A/sw.png");
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    border-radius: inherit;
+}
+
+.ui-icon-fw {
+    background-image: url("../../images/A/fw.png");
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    border-radius: inherit;
+}
+
+.ui-icon-txl {
+    background-image: url("../../images/A/txl.png");
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    border-radius: inherit;
+}
+
+.ui-icon-dbsy {
+    background-image: url("../../images/A/dbsy.png");
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    border-radius: inherit;
+}
+
+.ui-icon-ggxx {
+    background-image: url("../../images/A/ggxx.png");
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    border-radius: inherit;
+}
+
+.ui-icon-rcap {
+    background-image: url("../../images/A/rcap.png");
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    border-radius: inherit;
+}
+
+.ui-icon-xw {
+    background-image: url("../../images/A/xw.png");
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    border-radius: inherit;
+}
+
+.ui-icon-gg {
+    background-image: url("../../images/A/gg.png");
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    border-radius: inherit;
+}
+
+.ui-icon-tz {
+    background-image: url("../../images/A/tz.png");
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    border-radius: inherit;
+}
+/*办结发文*/
+.ui-icon-bjfw {
+    background-image: url("../../images/A/bjfw.png");
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    border-radius: inherit;
+}
+/*办结收文*/
+.ui-icon-bjsw {
+    background-image: url("../../images/A/bjsw.png");
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    border-radius: inherit;
+}
+/*待办发文*/
+.ui-icon-dbfw {
+    background-image: url("../../images/A/dbfw.png");
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    border-radius: inherit;
+}
+/*待办收文*/
+.ui-icon-dbsw {
+    background-image: url("../../images/A/dbsw.png");
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    border-radius: inherit;
+}
+/*地图*/
+.ui-icon-dt {
+    background-image: url("../../images/A/dt.png");
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    border-radius: inherit;
+}
+/*电子邮件*/
+.ui-icon-dzyj {
+    background-image: url("../../images/A/dzyj.png");
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    border-radius: inherit;
+}
+/*定位*/
+.ui-icon-dw {
+    background-image: url("../../images/A/dw.png");
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    border-radius: inherit;
+}
+/*发件箱*/
+.ui-icon-fjx {
+    background-image: url("../../images/A/fjx.png");
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    border-radius: inherit;
+}
+/*关于我们*/
+.ui-icon-gywm {
+    background-image: url("../../images/A/gywm.png");
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    border-radius: inherit;
+}
+/*起草*/
+.ui-icon-qc {
+    background-image: url("../../images/A/qc.png");
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    border-radius: inherit;
+}
+/*收发文起草*/
+.ui-icon-sfwqc {
+    background-image: url("../../images/A/sfwqc.png");
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    border-radius: inherit;
+}
+/*收件箱*/
+.ui-icon-sjx {
+    background-image: url("../../images/A/sjx.png");
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    border-radius: inherit;
+}
+/*邮件配置*/
+.ui-icon-yjpz {
+    background-image: url("../../images/A/yjpz.png");
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    border-radius: inherit;
+}
+/*在办发文*/
+.ui-icon-zbfw {
+    background-image: url("../../images/A/zbfw.png");
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    border-radius: inherit;
+}
+/*在办收文*/
+.ui-icon-zbsw {
+    background-image: url("../../images/A/zbsw.png");
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    border-radius: inherit;
+}
+/*雷达*/
+.ui-icon-ld {
+    background-image: url("../../images/A/ld.png");
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    border-radius: inherit;
+}
+/*市场份额*/
+.ui-icon-scfe {
+    background-image: url("../../images/A/scfe.png");
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    border-radius: inherit;
+}
+/*收入完成率*/
+.ui-icon-srwcl {
+    background-image: url("../../images/A/srwcl.png");
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    border-radius: inherit;
+}
+/*同期比较*/
+.ui-icon-tqbj {
+    background-image: url("../../images/A/tqbj.png");
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    border-radius: inherit;
+}
+/*图表*/
+.ui-icon-tb {
+    background-image: url("../../images/A/tb.png");
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    border-radius: inherit;
+}
+/*温度湿度*/
+.ui-icon-wdsd {
+    background-image: url("../../images/A/wdsd.png");
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    border-radius: inherit;
+}
+/*销售额*/
+.ui-icon-qse {
+    background-image: url("../../images/A/qse.png");
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    border-radius: inherit;
+}
+/*销售统计*/
+.ui-icon-qstj {
+    background-image: url("../../images/A/qstj.png");
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    border-radius: inherit;
+}
+/*销售增长*/
+.ui-icon-qszz {
+    background-image: url("../../images/A/qszz.png");
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    border-radius: inherit;
+}
+/*月报*/
+.ui-icon-yb {
+    background-image: url("../../images/A/yb.png");
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    border-radius: inherit;
+}
+/*2013-11-4 zdd 账务报帐系统*/
+/*报账查询*/
+.ui-icon-bzcx {
+    background-image: url("../../images/A/bzcx.png");
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    border-radius: inherit;
+}
+/*采购管理-办结事项*/
+.ui-icon-cggl-bjsx {
+    background-image: url("../../images/A/cggl-bjsx.png");
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    border-radius: inherit;
+}
+/*采购管理-传阅事项*/
+.ui-icon-cggl-cysx {
+    background-image: url("../../images/A/cggl-cysx.png");
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    border-radius: inherit;
+}
+/*采购管理-待办事项*/
+.ui-icon-cggl-dbsx {
+    background-image: url("../../images/A/cggl-dbsx.png");
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    border-radius: inherit;
+}
+/*采购管理-已办事项*/
+.ui-icon-cggl-ybsx {
+    background-image: url("../../images/A/cggl-ybsx.png");
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    border-radius: inherit;
+}
+/*合同管理-办结事项*/
+.ui-icon-htgl-bjsx {
+    background-image: url("../../images/A/htgl-bjsx.png");
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    border-radius: inherit;
+}
+/*合同管理-待办事项*/
+.ui-icon-htgl-dbsx {
+    background-image: url("../../images/A/htgl-dbsx.png");
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    border-radius: inherit;
+}
+/*合同管理-已办事项*/
+.ui-icon-htgl-ybsx {
+    background-image: url("../../images/A/htgl-ybsx.png");
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    border-radius: inherit;
+}
+/*我的办结*/
+.ui-icon-wdbj {
+    background-image: url("../../images/A/wdbj.png");
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    border-radius: inherit;
+}
+/*我的草稿*/
+.ui-icon-wdcg {
+    background-image: url("../../images/A/wdcg.png");
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    border-radius: inherit;
+}
+/*我的待办*/
+.ui-icon-wddb {
+    background-image: url("../../images/A/wddb.png");
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    border-radius: inherit;
+}
+/*我的申请*/
+.ui-icon-wdsq {
+    background-image: url("../../images/A/wdsq.png");
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    border-radius: inherit;
+}
+/*我的已办*/
+.ui-icon-wdyb {
+    background-image: url("../../images/A/wdyb.png");
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    border-radius: inherit;
+}
+/*======================header start=====================*/
+/* 取消header的下边阴影效果 */
+.ui-navigator {
+    -webkit-box-shadow: none;
+    -moz-box-shadow:  none;    
+    box-shadow: none;
+}
+/*======================header end======================*/
+
+
+/*======================body start======================*/
+/* 一般页面的背景 */
+.ui-body {
+    background-color: #e2e8f1;
+}
+
+/* 首页和九宫格页面的背景 */
+.index.ui-body,.jiugongge.ui-body{
+    background: url(../../images/A/background.png);
+}
+/*======================body end =======================*/
+
+
+/*======================footer start====================*/
+/* footer背景颜色 */
+.ui-footer {
+    background-image: -webkit-gradient(linear, left top, left bottom, from( #b90103), to( #e60108 ));
+    background-image: -webkit-linear-gradient( #b90103 , #e60108 );
+    background-image:    -moz-linear-gradient( #b90103 , #e60108 );
+    background-image:     -ms-linear-gradient( #b90103 , #e60108 );
+    background-image:      -o-linear-gradient( #b90103 , #e60108 );
+    background-image:         linear-gradient( #b90103 , #e60108 );
+    opacity: 0.9;
+}
+
+/* footer按钮hover和active的样式 */
+.ui-footer .ui-li-toolbar .ui-btn.active{
+    background-image: -webkit-gradient(linear, left top, left bottom, from( #e60108), to( #b90103 ));
+    background-image: -webkit-linear-gradient( #e60108 , #b90103 );
+    background-image:    -moz-linear-gradient( #e60108 , #b90103 );
+    background-image:     -ms-linear-gradient( #e60108 , #b90103 );
+    background-image:      -o-linear-gradient( #e60108 , #b90103 );
+    background-image:         linear-gradient( #e60108 , #b90103 );
+    color: #333333;
+    cursor: pointer;
+}
+/*======================footer end========================*/
+
+
+/*======================登录页 start======================*/
+
+/* 设置登录页面列表的整体样式 */
+.umap-login-ul.ui-listview {
+    width: 96%;
+    margin: 10px auto;
+    margin-top: 3%;
+    -webkit-border-radius: .6em ;
+    -moz-border-radius: .6em;
+    border-radius: .6em;
+    background-color: rgb(243,243,243);     
+    -webkit-box-shadow: inset 0px 0px 1px 1px #6d6659;    
+    -moz-box-shadow:    inset 0px 0px 1px 1px #6d6659;  
+    box-shadow:        inset 0px 0px 1px 1px #6d6659;   
+}
+
+/* 设置登录页面列表的样式 */
+.umap-login-ul.ui-listview>.ui-li {
+    height: 40px;
+    line-height: 40px;
+    border-bottom-color: rgb(190,190,190);
+}
+
+/* "用户名"、"密码"的样式 */
+.umap-login-label{
+    margin-left: 10px;
+    color: #333333;
+}
+
+/* 设置登录页面用户名输入框的位置 */
+.umap-login-input{
+    height: inherit;
+    position: absolute;
+    right:5px;
+    top:0px;
+    left: 80px;
+}
+
+/* 设置登录页面输入框样式 */
+.umap-login-input input[type=text],.umap-login-input input[type=text]:focus
+,.umap-login-input input[type=password],.umap-login-input input[type=password]:focus{
+    text-align: left;
+    border-width: 0px;
+    border-style: none;
+    border-color: transparent;
+    -webkit-border-radius: 0 ;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    -webkit-box-shadow:none;
+    -moz-box-shadow:none;
+    box-shadow:none;
+    background-color: transparent;
+    font-size: 16px;
+    color: #7a7a7a;
+    outline: none;
+    outline-color: transparent;
+    height: inherit;
+}
+
+/* "记住密码"样式 */
+.umap-login-check {
+    color:#333333;
+    float: right;
+    margin-right: 2%;
+    margin-bottom: 8px;
+}
+
+/* 设置记住密码未选中时的图片 */
+#login>.umap-login-check .ui-checkbox {
+    width: 21px;
+    height: 21px;
+    line-height: 21px;
+    -webkit-border-radius: 0 ;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    background-color: transparent;
+    background-image: url(../../images/A/login-check-a.png);
+    background-position: 0 0;
+    background-size: contain;
+}
+
+/*设置记住密码选中时的图片 */
+#login>.umap-login-check .ui-checkbox.ui-checked {
+    background-color: transparent;
+    background-image: url(../../images/A1/login-check-b.png);
+    background-position: 0 0;
+    background-size: contain;
+}
+
+/* 登录按钮居中 */
+.umap-login-button {
+    width: 96%;      
+    margin: 10px auto;
+}
+
+/* 设置登录页面登录按钮的样式 */
+.umap-login-button .ui-btn{
+    -webkit-border-radius: 0.6em;
+    -moz-border-radius: 0.6em;
+    border-radius: 0.6em;
+    min-width: 100%;
+    min-height: 40px;
+    line-height: 40px;
+    color: #FFFFFF;
+    font-size: 18px;
+    margin: 0px;
+    background-image: -webkit-gradient(linear, left top, left bottom, from( #e60108), to( #b90103 ));
+    background-image: -webkit-linear-gradient( #e60108 , #b90103 );
+    background-image:    -moz-linear-gradient( #e60108 , #b90103 );
+    background-image:     -ms-linear-gradient( #e60108 , #b90103 );
+    background-image:      -o-linear-gradient( #e60108 , #b90103 );
+    background-image:         linear-gradient( #e60108 , #b90103 );
+    border-bottom-color: gray;
+    border-bottom-width: 2px;
+}
+
+/*设置登录页面登录按钮选中时的样式 */
+.umap-login-button .ui-btn.active{
+    background-image: -webkit-gradient(linear, left top, left bottom, from( #b90103), to( #AE0000 ));
+    background-image: -webkit-linear-gradient( #b90103 , #AE0000 );
+    background-image:    -moz-linear-gradient( #b90103 , #AE0000 );
+    background-image:     -ms-linear-gradient( #b90103 , #AE0000 );
+    background-image:      -o-linear-gradient( #b90103 , #AE0000 );
+    background-image:         linear-gradient( #b90103 , #AE0000 );
+    cursor: pointer;
+}
+
+/*======================登录页 end========================*/
+
+
+/*======================列表页 start======================*/
+
+/* 列表detail左侧字体的颜色 */
+span.umap-list-left {
+    color: #bb0103;
+}
+/*======================列表页 end======================*/
+
+
+/*======================详细页 start====================*/
+
+/* 详细页面按钮的字体及背景颜色 */
+.umap-detail.ui-listview .ui-btn {
+    color:white;
+    background-image: -webkit-gradient(linear, left top, left bottom, from( #d00106 ), to( #bd0003 )); 
+    background-image: -webkit-linear-gradient( #d00106 , #bd0003 );  
+    background-image:    -moz-linear-gradient( #d00106 , #bd0003 ); 
+    background-image:     -ms-linear-gradient( #d00106 , #bd0003 );
+    background-image:      -o-linear-gradient( #d00106 , #bd0003 );
+    background-image:         linear-gradient( #d00106 , #bd0003 );
+}
+
+/* toolbar、按钮按下去的样式 */
+.ui-toolbar .ui-li-toolbar .ui-btn.selected,.umap-detail.ui-listview .ui-btn.active {
+    background-image: -webkit-gradient(linear, left top, left bottom, from( #bd0003), to( #d00106 ));
+    background-image: -webkit-linear-gradient( #bd0003 , #d00106 );
+    background-image:    -moz-linear-gradient( #bd0003 , #d00106 );
+    background-image:     -ms-linear-gradient( #bd0003 , #d00106 );
+    background-image:      -o-linear-gradient( #bd0003 , #d00106 );
+    background-image:         linear-gradient( #bd0003 , #d00106 );
+}
+/*弹出框右上角的关闭图片*/
+.ui-popup-close {
+    background: url(../../images/A1/popup-close.png) no-repeat;
+    background-size: 28px 28px;
+}
+/*弹出框的radio和checkbox样式*/
+.ui-popup-controlgroup .ui-checkbox, .ui-popup-controlgroup .ui-radio {
+    background: url("../images/icons-18-white.png") no-repeat;
+}
+.ui-popup-controlgroup .ui-checkbox {
+    border-radius: 3px;
+    background-position: -682px 0;
+    background-size: 864px 18px;
+}
+
+.ui-popup-controlgroup .ui-radio {
+    border-radius: 10px;
+    background-position: -754px -1px;
+    background-size: 864px 18px;
+}
+.ui-popup-controlgroup .ui-checkbox.ui-checked {
+    background-position: -647px 0;
+    background-size: 864px 18px;
+}
+.ui-popup-controlgroup .ui-radio.ui-checked {
+    background-position: -718px 0px;
+    background-size: 864px 18px;
+}
+/* radio以及checkbox选中的样式 */
+.ui-checkbox.ui-checked,.ui-radio.ui-checked
+,.ui-popup-controlgroup .ui-checkbox, .ui-popup-controlgroup .ui-radio
+, input[type=checkbox]:checked, input[type=radio]:checked {
+    background-color: #d00106;
+}
+
+/* 输入框文字左对齐 */
+input[type=text],input[type=password] {
+    text-align: left;
+}
+/*======================详细页 end======================*/
+
+/*============== 九宫格选项卡(数字) start ==============*/
+
+/* 九宫格选项卡选中时的button样式 */
+.jiugongge .erp-ul.umap-detail .ui-btn.selected {
+    color: #b90103;
+    border-bottom: 2px solid #b90103;
+}
+
+/* 显示数字的背景及位置 */
+.jiugongge .ABC-account-image {
+    background-color: #e60108;
+}
+/*============== 九宫格选项卡(数字)  end  ==============*/
+/*分屏背景*/
+.ui-splitview{
+    background: url(../../images/A1/split-background.png) no-repeat;
+    background-size: cover; 
+}
+
+/*删除按钮*/
+.ui-grid-icon>.quiver-delete-btn{
+  width: 20px;
+height: 20px;
+top: -7px;
+left: -7px;
+background:url("../../images/A/x.png") no-repeat;
+background-size: 20px;
+z-index: 1;
+position: absolute;
+}
+.ui-grid-icon>.quiver-add-btn{
+  width: 20px;
+height: 20px;
+top: -5px;
+left: -5px;
+background:url("../../images/A/+.png") no-repeat;
+background-size: 20px;
+z-index: 1;
+position: absolute;
+}
+.umap-icon-recycle>span{
+    white-space: nowrap;
+    text-align: center;
+}
+.umap-icon-migrant>span{
+    white-space: nowrap;
+    text-align: center;
+}

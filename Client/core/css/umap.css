@@ -1,0 +1,2122 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: inherit;
+    font-weight: inherit;
+    background-color: transparent;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    line-height: inherit;
+    color: inherit;
+    font-family: 微软雅黑;
+    /*-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;*/
+
+}
+.ui-view, .ui-navigator, .ui-header, .ui-body, .ui-footer, .ui-li, .ui-btn, .ui-li-nav,.ui-title
+,.umap-set ,.ui-autowrap,div[data-role='umap-editor'] textarea
+,.umap-detail-text,.ui-select>span:first-of-type,.ui-popup-controlgroup .ui-control>span:last-of-type
+,.ui-popup-controlgroup,.ui-ti,.ui-ti-content,.ui-file>span:first-of-type
+{
+    overflow: hidden;
+}
+.ui-body{
+    /*-webkit-transform: translateZ(0);
+        -moz-transform: translateZ(0);
+        -ms-transform: translateZ(0);
+        -o-transform: translateZ(0);
+        transform: translateZ(0);*/
+        -webkit-transform: translate3d(0,0,0);
+-moz-transform: translate3d(0,0,0);
+-ms-transform: translate3d(0,0,0);
+-o-transform: translate3d(0,0,0);
+transform: translate3d(0,0,0);
+}
+.ui-scrollwrapper, .ui-scroller{
+    -webkit-transform: translate3d(0, 0, 0);
+}
+.ui-scrollwrapper{
+    overflow: hidden;
+}
+
+.ui-left {
+    float: left;
+}
+
+.ui-center {
+    position: absolute;
+    left: 70px;
+    right: 70px;
+    margin: auto;
+    text-align: center;
+}
+
+.ui-right {
+    float: right;
+}
+
+.ui-grid-a > * {
+    width: 50%;
+}
+
+.ui-grid-b > * {
+    width: 33.333%;
+}
+
+.ui-grid-c > * {
+    width: 25%;
+}
+
+.ui-grid-d > * {
+    width: 20%;
+}
+
+.ui-grid-e > * {
+    width: 16.666%;
+}
+
+.ui-grid-f > * {
+    width: 14.285%;
+}
+
+.ui-grid-a > *, .ui-grid-b > *, .ui-grid-c > *, .ui-grid-d > *
+, .ui-grid-e > *, .ui-grid-f > *{
+    float: left;
+}
+
+body {
+    font-size: 16px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background-color: transparent;
+    position: absolute;
+    height: 100%;
+    width: 100%
+}
+.ui-main-container, .ui-view-container {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background: transparent;
+}
+
+.ui-splitview {
+    display: none;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background: transparent;
+}
+
+.ui-panel {
+    position: absolute;
+    display: none;
+    top: 0;
+    right: -100%;
+    width: 230px;
+    height: 100%;
+    background-color: rgb(56, 56, 56);
+    color: lightgray;
+    font-weight: bolder;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.ui-panel li {
+    height: 43px;
+    line-height: 43px;
+    border-bottom: 1px solid rgb(49, 49, 49);
+    border-top:1px solid rgb(65, 65, 65);
+    padding-left:15px;
+}
+
+.ui-panel a{
+    text-decoration: none;
+    width: 100%;
+}
+.ui-panel a div{
+    height: 43px;
+    line-height: 43px;
+}
+
+.ui-panel-left-icon{
+    width: 40px;
+    height: 40px;
+    float: left;
+    padding-right: 6px;
+}
+
+.ui-panel-right-icon{
+    width: 40px;
+    height: 40px;
+    float: right;
+    padding-left: 6px;
+}
+
+.ui-hide-panel {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    z-index: 100001;
+}
+
+.ui-view {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.ui-navigator {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 44px;
+    border-top: 1px rgba(255, 255, 255, .5) solid;
+    border-bottom: 1px rgba(0, 0, 0, .5) solid;
+    -webkit-box-shadow: 0 0 10px #35868b;
+    box-shadow: 0 0 10px #35868b;
+    z-index: 100000;
+}
+
+.ui-header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 40px;
+    z-index: 100000;
+    background-image: -webkit-gradient(linear, left top, left bottom, from( #3a3a3a), to( #686868 ));
+    background-image: -webkit-linear-gradient( #3a3a3a , #686868 );
+    background-image:    -moz-linear-gradient( #3a3a3a , #686868 );
+    background-image:     -ms-linear-gradient( #3a3a3a , #686868 );
+    background-image:      -o-linear-gradient( #3a3a3a , #686868 );
+    background-image:         linear-gradient( #3a3a3a , #686868 );
+}
+
+.ui-body {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    background-color: #dddddd;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch; /* ios5+ */
+}
+.ui-body[data-no-scroll="false"]{
+    overflow-y: hidden;
+}
+.ui-with-navigator {
+    top: 44px;
+}
+
+.ui-with-header {
+    top: 40px;
+}
+
+.ui-with-navigator.ui-with-header {
+    top: 84px;
+}
+
+.ui-with-footer {
+    bottom: 44px;
+    border-bottom: 1px rgba(0, 0, 0, .9) solid;
+}
+
+.ui-body-padding {
+    position: absolute;
+    height: 1px;
+    bottom: -1px;
+    left: 0;
+    right: 0px;
+}
+
+.ui-footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 44px;
+    border-top: 1px rgba(255, 255, 255, .5) solid;
+    z-index: 100000;
+}
+
+.ui-title {
+    top: 0;
+    bottom: 0;
+    height: 1em;
+    line-height: 1em;
+    padding: 0;
+    margin: auto;
+    font-size: 20px;
+    letter-spacing: .1em;
+    color: #fff;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.ui-bouncing {
+    height: 66px;
+    line-height: 66px;
+    text-align: center;
+}
+.ui-loading{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    background: rgba(0, 0, 0, .6) ;
+    z-index: 100001;
+    text-align: center;
+}
+/*画布绘制的加载动画*/
+.ui-loading.canvas .ui-loader{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -75px;
+    margin-top: -50px;
+    background-color: black;
+    border-style: none;
+    border-radius: 12px;
+}
+.ui-loading.canvas .ui-loading {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    background: rgba(20, 20, 20, .5) ;
+    z-index: 100001;
+    text-align: center;
+
+}
+.ui-loading.canvas .ui-loading-text{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 5px;
+    z-index: 1;
+    color: white;
+    font-size: 18px;
+}
+/*gif格式的加载动画*/
+.ui-loading.gif .ui-loader {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    background: url("../images/loader.gif") no-repeat center;
+    z-index: 100002;
+}
+/*进度条的加载动画*/
+.ui-loading.progressbar .ui-loader {
+    z-index: 100002;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -150px;
+    margin-top: -50px;
+}
+.ui-loading.progressbar .progressbar-loading{
+    color: white;
+    padding-top: 15px;
+    text-align: right;
+}
+.ui-loading.progressbar .progressbar-loading .progressbar-text{
+    font-size: 20px;
+}
+.ui-loading.progressbar .progressbar-info{
+    padding-bottom: 10px;
+    color: white;
+    text-align: left;
+}
+.ui-icon-badge {
+    position: absolute;
+    display: block;
+    right: -10px;
+    top: -10px;
+    width: 24px;
+    height: 24px;
+    border-radius: 12px;
+    background-color: #e50000;
+    border: 1px #ffffff solid;
+    color: #ffffff;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    line-height: 22px;
+}
+
+.ui-btn {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 2.2em;
+    line-height: 2.2em;
+    padding: 0px .7em;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 15px;
+    color: #333333;
+    white-space: nowrap;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background-image: -webkit-gradient(linear, left top, left bottom, from( #ffffff), to( #aaaaaa ));
+    background-image: -webkit-linear-gradient( #ffffff , #aaaaaa );
+    background-image:    -moz-linear-gradient( #ffffff , #aaaaaa );
+    background-image:     -ms-linear-gradient( #ffffff , #aaaaaa );
+    background-image:      -o-linear-gradient( #ffffff , #aaaaaa );
+    background-image:         linear-gradient( #ffffff , #aaaaaa );
+    box-shadow: 0 1px 3px #000000;
+    border-width: 0;
+}
+
+.ui-btn.active {
+    color: #ffffff;
+}
+
+.ui-btn-icon {
+    position: absolute;
+}
+
+.ui-btn-inline {
+    display: inline-block;
+    width: auto;
+}
+
+.ui-btn-navigator {
+    display: inline-block;
+    line-height: 31px;
+    margin: 6px 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 31px;
+    font-size: 14px;
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+    white-space: nowrap; 
+    vertical-align: middle;
+}
+
+.umap-btn-back {
+    background-image: url(../images/back-A.png);
+    background-repeat: no-repeat;
+    border-width: 0;
+    background-clip: border-box;
+    background-position: 50%;
+    background-size: contain;
+    width: 54px;
+    padding: 0 0 0 4px;
+}
+
+.umap-btn-back.active {
+    background-image: url(../images/back-B.png);
+}
+
+.umap-set {
+    width: 31px;
+    background-size: contain;
+    background-image: url(../images/set-A.png);
+    background-repeat: no-repeat;
+}
+
+.umap-set.active {
+    background-image: url(../images/set-B.png);
+}
+
+/* 九宫格 */ 
+.umap-table {
+    padding: 10px;
+}
+
+.umap-table > div {
+    margin-top: 20px;
+    white-space: nowrap;
+    text-align: center;
+    color: #333333;
+}
+
+/* 通用列表 */
+.ui-listview {
+    clear: both;
+}
+
+.ui-inset {
+    margin: 5px 10px;
+    border-radius: .3em;
+    box-shadow: 0 0 3px 1px rgba(0,0,0,.3);
+}
+
+.ui-li {
+    list-style: none;
+    clear: both;
+    position: relative;
+    text-align: left;
+    border-bottom: 1px solid #949494;
+    border-top: 1px solid  #ffffff;
+    /*    padding: 0px 10px;*/
+}
+
+.ui-li:first-child {
+    border-top: 0;
+    border-top-right-radius: inherit;
+    border-top-left-radius: inherit;
+}
+
+.ui-li:last-child {
+    border-bottom: 0;
+    border-bottom-right-radius: inherit;
+    border-bottom-left-radius: inherit;
+}
+
+/* 列表页列表项 */
+.ui-li-nav {
+    display: block;
+    position: relative;
+    height: 100%;
+    padding: 0 25px 3px 10px;
+}
+
+.ui-li-nav.active * {
+    color: #ffffff;
+}
+
+.ui-li-icon {
+    position: absolute;
+    background: url("../images/arrow.png") no-repeat;
+    background-position: 100% 50%;
+    background-size: contain;
+    top: 0px;
+    bottom: 0px;
+    right: 10px;
+    width: 10px;
+    margin: auto;
+}
+
+.umap-list-title {
+    display: table-cell;
+    width: 100%;
+    vertical-align: middle;
+    line-height: 1.2em;
+    height: 2.5em;
+    max-height: 2.5em;
+    text-overflow: ellipsis;
+    clear: both;
+    font-size: 16px;
+}
+
+.umap-list-detail {
+    clear: both;
+    font-size: 12px;
+    color: gray;
+}
+
+.umap-list-left {
+    clear: left;
+}
+
+.umap-list-center {
+    position: absolute;
+    left: 80px;
+}
+
+.umap-list-right {
+    float: right;
+}
+
+.ui-autowrap {
+    display: block;
+    vertical-align: inherit;
+    max-height: 2.5em;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+/* 详细页内容 */
+.umap-detail>.ui-li {
+    position: relative;
+    /*line-height: 1.5em;*/
+}
+
+.umap-detail-left {
+    position: absolute; 
+    left: 10px;
+    height: 2em;
+    line-height: 2em;
+    padding-top: .25em;
+}
+
+.umap-detail-right {
+    display: block;
+    position: relative;
+    width: 100%;
+    padding: .25em 10px .25em 70px; 
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    min-height: 2.5em;
+}
+
+input[type=text], input[type=password], textarea, .ui-select, .ui-editor {
+    width: 100%; 
+    margin: 0;
+    padding: .2em .5em;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: white;
+    background-clip: padding-box;
+    border: 1px solid #b7b7b7;
+    /*box-shadow: 0px 0px 2px 1px #6d6659 inset;*/
+    border-radius: .6em;
+    -webkit-user-select: text;
+}
+
+.ui-editor * {
+    -webkit-user-select: text;
+}
+div[data-role='umap-editor']{
+    position: relative;
+    height: 10em;
+}
+div[data-role='umap-editor'] textarea{
+    position: absolute;
+    z-index: 0;
+    background-color: transparent;
+    color: transparent;
+    width: 0px;
+    height: 25px;
+    padding: 0;
+    margin: 0;
+}
+div[data-role='umap-editor'] textarea:focus{
+    background-color: transparent;
+    color: transparent;
+    padding: 0;
+    margin: 0;
+}
+.umap-detail-text {
+    display: block;
+    width: 100%;
+    white-space: nowrap; 
+    text-overflow: ellipsis;
+}
+
+input[type=text], input[type=password], .ui-select, .umap-detail-text {
+    height: 2em;
+    line-height: 2em;
+    text-align: right;
+}
+
+.ui-editor, textarea {
+    overflow-y: auto;
+    line-height: 1.5em;
+    height: 10em;
+    resize: none;
+}
+.ui-editor{
+    height: 100%; /*兼容农行，可以在模板里控制高度*/
+}
+select {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+select[data-role="none"] {
+    opacity: 1;
+}
+.ui-select {
+    display: block;
+    width: 100%;
+    position: relative;
+    padding-right: 35px;
+    line-height: 1.5em;
+}
+
+.ui-select>span:first-of-type {
+    display: block;
+    height: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.ui-select>span:last-of-type {
+    position: absolute;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: inherit;
+    background: url("../images/arrow_d.png") no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+    width: 17px;
+    top: 0;
+    bottom: 0;
+    right: 10px;
+}
+
+.ui-controlgroup {
+    clear: both;
+    padding: 0;
+    border: 1px solid #b7b7b7;
+    /*box-shadow: 0px 0px 1px 0px #6d6659;*/
+    border-radius: .6em;
+}
+
+.ui-control {
+    padding: 3px 10px;
+    line-height: 1.5em;
+}
+
+.ui-vertical>* {
+    display: block;
+    border-bottom: 1px solid #ccc;
+}
+
+.ui-horizontal {
+    float: right;
+}
+
+.ui-horizontal>* {
+    float: left;
+    border-left: 1px solid #ccc;
+}
+
+.ui-vertical>:first-child {
+    border-top: 0;
+    border-top-right-radius: inherit;
+    border-top-left-radius: inherit;
+}
+
+.ui-vertical>:last-child {
+    border-bottom: 0;
+    border-bottom-right-radius: inherit;
+    border-bottom-left-radius: inherit;
+}
+
+.ui-horizontal>:first-child {
+    border-left: 0;
+    border-top-left-radius: inherit;
+    border-bottom-left-radius: inherit;
+}
+
+.ui-horizontal>:last-child {
+    border-right: 0;
+    border-top-right-radius: inherit;
+    border-bottom-right-radius: inherit;
+}
+
+.ui-control>span {
+    display: inline-block;
+}
+
+.ui-control>span:first-of-type {
+    margin-right: 3px;
+}
+.ui-popup-controlgroup .ui-control>span:last-of-type {
+    width: 85%;
+    white-space: nowrap;
+    text-overflow: ellipsis; 
+}
+.ui-control>span:last-of-type {
+    margin-left: 3px;    
+}
+
+.ui-control>span:only-of-type {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+input[type=checkbox], input[type=radio] {
+    display: none;
+}
+input[type=checkbox][data-role='none'], input[type=radio][data-role='none'] {
+    display: inline;
+}
+.ui-checkbox, .ui-radio {
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    background: url("../images/icons-18-white.png") no-repeat;
+}
+
+.ui-checkbox {
+    border-radius: 3px;
+    background-position: -682px 0;
+    background-size: 864px 18px;
+}
+
+.ui-radio {
+    border-radius: 10px;
+    background-position: -754px -1px;
+    background-size: 864px 18px;
+}
+
+.ui-checkbox.ui-checked {
+    background-color: #d00106;
+    background-position: -647px 0;
+    background-size: 864px 18px;
+}
+.ui-radio.ui-checked {
+    background-color: #d00106;
+    background-position: -718px 0px;
+    background-size: 864px 18px;
+}
+.ui-control.disabled {
+    color: graytext;
+}
+.ui-control.ui-checked {
+    background-image: -webkit-gradient(linear, left top, left bottom, from( #d00106), to( #bd0003 ));
+    background-image: -webkit-linear-gradient( #d00106 , #bd0003 );
+    background-image:    -moz-linear-gradient( #d00106 , #bd0003 );
+    background-image:     -ms-linear-gradient( #d00106 , #bd0003 );
+    background-image:      -o-linear-gradient( #d00106 , #bd0003 );
+    background-image:         linear-gradient( #d00106 , #bd0003 );
+    color: white;
+    text-shadow: 0 1px 0 #808080;
+}
+
+/* Popup */
+.ui-popup-overlay {
+    display: none;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    background-color: rgba(20, 20, 20, .5);
+    z-index: 200000;
+
+    -webkit-box-pack:center;
+    -moz-box-pack:center;
+    box-pack:center;
+    -webkit-box-align:center;
+    -moz-box-align:center;
+    box-align:center;
+    -ms-flex-pack: center;
+    -ms-flex-align: center;
+}
+
+.ui-popup-overlay.ui-shown {
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:-moz-box;
+    display:box;
+}
+
+.ui-popup {
+    display: none;
+    position: relative;
+    min-width: 280px;
+    max-width: 95%;
+    border-radius: .3em;
+    background-color: transparent;
+    border-width: 0px;
+    box-shadow: 0 0 12px rgba(0,0,0,.6);
+    margin-bottom: 44px;
+}
+
+.ui-popup>:first-of-type {
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+}
+
+.ui-popup>:last-of-type {
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+}
+.ui-popup .ui-popup-buttoncontainer {
+  position: absolute;
+  /*bottom: 0px;*/
+  width: 100%;
+  z-index: 999;
+}
+.ui-popup{
+    max-height: 344px;
+}
+.ui-popup-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url("../images/popup_close.png");
+    background-size: 28px 28px;
+    width: 28px;
+    height: 28px;
+}
+
+.ui-popup-controlgroup {
+    max-height: 300px;
+    overflow-y: auto;
+    /*margin-bottom: 44px;*/
+}
+
+.ui-popup-controlgroup>*, .ui-popup-buttoncontainer {
+    /*padding: 3px 10px;*/
+    display: block;
+    border-bottom: 1px solid rgba(255, 255, 255, .3);
+    height: 34px;
+    line-height: 34px;
+    color: white;
+    font-size: 18px;
+    background-color: rgba(0, 0, 0, .75);
+    /*    background-image: -webkit-linear-gradient( #000000 , #272727 );
+        background-image: linear-gradient( #000000 , #272727 );*/
+}
+
+.ui-popup-controlgroup>:first-child {
+    border-top: 0;
+    border-top-right-radius: inherit;
+    border-top-left-radius: inherit;
+}
+
+.ui-popup-controlgroup>:last-child {
+    border-bottom: 0;
+    border-bottom-right-radius: inherit;
+    border-bottom-left-radius: inherit;
+}
+
+.ui-popup-controlgroup .ui-checkbox, .ui-popup-controlgroup .ui-radio {
+    background-color: transparent;
+    background-image: none;
+    width: 18px;
+    height: 18px;
+}
+
+.ui-popup-controlgroup .ui-checkbox.ui-checked, .ui-popup-controlgroup .ui-radio.ui-checked {
+    background-image: url("../images/icons-18-white.png");
+    background-position: -252px 0;
+    background-size: 864px 18px;
+}
+
+.ui-popup-buttoncontainer {
+    border-top: 1px rgba(0, 0, 0, .8) solid;
+}
+
+.ui-popup-button {
+    display: block;
+    text-align: center;
+    background-image: -webkit-gradient(linear, left top, left bottom, from( #d00106), to( rgba(44, 44, 44, .3) ));
+    background-image: -webkit-linear-gradient( rgba(92, 92, 92, .3) , rgba(44, 44, 44, .3) );
+    background-image:    -moz-linear-gradient( rgba(92, 92, 92, .3) , rgba(44, 44, 44, .3) );
+    background-image:     -ms-linear-gradient( rgba(92, 92, 92, .3) , rgba(44, 44, 44, .3) );
+    background-image:      -o-linear-gradient( rgba(92, 92, 92, .3) , rgba(44, 44, 44, .3) );
+    background-image:         linear-gradient( rgba(92, 92, 92, .3) , rgba(44, 44, 44, .3) );
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.ui-popup-button:first-of-type{
+    float: left;
+    width: 50%;
+    border-right: 1px rgba(0, 0, 0, .5) solid;
+    border-bottom-left-radius: inherit;
+}
+
+.ui-popup-button:last-of-type {
+    float: right;
+    width: 50%;
+    border-left: 1px rgba(255, 255, 255, .2) solid;
+    border-bottom-right-radius: inherit;
+}
+
+.ui-popup-button:only-of-type {
+    float: none;
+    width: 100%;
+    border-left-width: 0;
+    border-right-width: 0;
+}
+
+/* 树 */
+.ui-treeview {
+    clear: both;
+    /*    border-bottom: 1px solid #949494;
+        border-top: 1px solid  #ffffff;*/
+}
+
+.ui-ti>* {
+    border-bottom: 1px solid #949494;
+    border-top: 1px solid  #ffffff;
+}
+
+.ui-ti {
+    list-style: none;
+    clear: both;
+    position: relative;
+    text-align: left;
+    /*    padding: 0px 10px;*/
+}
+
+.ui-ti:first-child {
+    border-top: 0;
+    border-top-right-radius: inherit;
+    border-top-left-radius: inherit;
+}
+
+.ui-ti:last-child {
+    border-bottom: 0;
+    border-bottom-right-radius: inherit;
+    border-bottom-left-radius: inherit;
+}
+
+.ui-ti:first-child>*:first-child {
+    border-top: 0;
+}
+
+.ui-ti:last-child>*:last-child {
+    border-bottom: 0;
+}
+
+.ui-ti-content {
+    position: relative;
+    line-height: 1.5em;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.ui-ti-content:only-of-type {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.ui-ti-text {
+    display: block;
+    padding: 3px 10px;
+}
+
+.ui-ti-checkbox-holder {
+    padding-left: 32px;
+}
+
+.ui-ti-showicon {
+    padding-right: 35px;
+}
+
+.ui-ti-icon {
+    position: absolute;
+    background: url("../images/arrow_d.png") no-repeat;
+    background-position: 100% 50%;
+    background-size: contain;
+    background-origin: content-box;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    width: 35px;
+    padding-left: 7px;
+    padding-right: 10px;
+    border-left: 1px solid #949494;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.ui-ti-icon.ui-expanded {
+    background-image: url("../images/arrow_u.png");
+}
+
+/* 头部和底部工具条 */
+.ui-listview-toolbar {
+    height: 100%;
+    list-style:none;
+}
+
+.ui-listview-toolbar.ui-grid-b {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.ui-li-toolbar {
+    position: relative;
+    height: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.ui-grid- .ui-li-toolbar {
+    padding-left: 90px;
+    padding-right: 90px;
+}
+
+.ui-grid-a .ui-li-toolbar {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.ui-grid-b .ui-li-toolbar {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.ui-toolbar .ui-btn {
+    margin: 5px auto;
+    height: 30px;
+    line-height: 30px;
+}
+
+.ui-footer .ui-toolbar .ui-btn {
+    margin-top: 6px;
+}
+
+.ui-toolbar .ui-btn.active {
+    background: transparent;
+    box-shadow: 0px 1px 5px 1px #600000 inset;
+    text-shadow: none;
+    border-width: 0px;
+}
+
+/* 底部按钮 */
+
+/* 上传控件 */
+.ui-file {
+    display: block;
+    width: 100%;
+    position: relative;
+    padding-left: 5px;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    /* background-color: white;*/
+    background-clip: padding-box;
+    border: 1px solid #b7b7b7;
+    border-radius: .6em;
+    background: url("../images/arrow_d.png") no-repeat;
+    background-position: 100% 50%;
+}
+
+.ui-file>span:first-of-type {
+    display: block;
+    height: 100%;
+    white-space: nowrap;
+    text-align: left;
+    text-overflow: ellipsis;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+/* 查看文件 */
+.ui-filegroup-item {
+    text-decoration:none;
+    white-space: nowrap;
+}
+
+/*datepicker*/
+.ui-datepickerwrapper {
+    display: table;
+    background-color: #000000;
+    width:280px;
+
+}
+.both {
+
+}
+.date {
+
+}
+.time {
+
+}
+
+.ui-datepickerwrapper .ui-datepicker {
+
+    width: 100%;
+    background-color: #000000;
+    display: table-cell;
+
+}
+
+.ui-datepicker h4 {
+    text-align:center;
+    color: #ffffff;
+    margin-top:15px;
+    margin-bottom:8px;
+    font-size:1.5em;
+}
+
+.ui-datepicker hr {
+    color: #ffffff;
+    opacity: .7;
+    margin-right:6%;
+    margin-left:6%;
+}
+
+.ui-datepicker ul {
+    list-style-type: none;
+    border: 0px blue solid;
+    width: 100%;
+    background: #000000;
+    margin-right:4%;
+    margin-left:4%;
+
+}
+
+.ui-datepicker ul li {
+    float: left;
+    list-style-type: none;
+    width: 30%;
+}
+
+.ui-datepicker ul li ul {
+    width: 100%;
+    color: #00FF33;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.ui-datepicker ul li ul li {
+    float: none;
+    width: 100%;
+    text-align: center;
+}
+
+
+
+.hours{
+    margin-left:15.5%;
+}
+
+
+.ui-datepicker ul li ul li input 
+,.ui-datepicker ul li ul li .ui-datepicker-input{
+    display: block;
+
+    max-height: 55px;
+    color: black;
+    width: 92%;
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #B3B3B3;
+    font: bold 1.8em Helvetica, Arial, sans-serif;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+}
+
+.ui-datepicker ul li ul li .background {
+    background-color: #cccccc;
+    color: #666666;
+    max-height: 40px;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+}
+.ui-datepicker ul li ul li .background.disabled{
+    background-color: grey; 
+}
+
+.ui-datepicker ul li .button {
+    background-color: #555555;
+    max-height: 55px;
+    color: white;
+    width: 100px;
+    text-align: center;
+}
+.ui-datepicker-top{
+
+}
+.ui-datepicker-buttoncontainer {
+    padding: 3px 10px;
+    display: block;
+    /*    border-bottom: 1px solid #ccc;*/
+    border-bottom: 1px solid rgba(255, 255, 255, .3);
+    height: 40px;
+    line-height: 40px;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    background-image: -webkit-gradient(linear, left top, left bottom, from( #000000), to( #272727 ));
+    background-image: -webkit-linear-gradient( #000000 , #272727 );
+    background-image:    -moz-linear-gradient( #000000 , #272727 );
+    background-image:     -ms-linear-gradient( #000000 , #272727 );
+    background-image:      -o-linear-gradient( #000000 , #272727 );
+    background-image:         linear-gradient( #000000 , #272727 );
+}
+
+/* pad样式 */
+@media screen and (min-width: 800px) and (orientation: landscape) {
+    .ui-splitview {
+        display: block;
+        left: 0;
+        width: 33.3%;
+        z-index: 1;
+    }
+
+    .ui-view-container {
+        width: 66.7%;
+    }
+}
+
+/* 横屏样式 */
+@media screen and (orientation: landscape) {
+
+
+
+    .both {
+        width:462px;
+    }
+    .date {
+        width:280px;
+    }
+    .time {
+        width:280px;
+    }
+
+    .ui-datepicker ul li {
+
+        width: 84px;
+    }
+
+
+    .hours{
+        margin-left:0;
+    }
+    .time .hours{
+        margin-left:15.7%;
+    }
+    .ui-datepicker h4 {
+        margin-left:0;
+    }
+    .ui-datepicker hr {
+
+        margin-right:4%;
+        margin-left:4%;
+    }
+    .ui-datepicker ul li ul li input,
+    .ui-datepicker ul li ul li .ui-datepicker-input{
+
+        font: bold 1.6em Helvetica, Arial, sans-serif;
+
+    }
+}
+/*datepicker--end*/
+/*======================换肤页面 start======================*/
+.umap-style .A1{
+    background: url("../images/A1.png") no-repeat;
+    background-size: contain;
+}
+.umap-style .A2{
+    background: url("../images/A2.png") no-repeat;
+    background-size: contain;
+}
+.umap-style .A3{
+    background: url("../images/A3.png") no-repeat;
+    background-size: contain;
+}
+.umap-style .A4{
+    background: url("../images/A4.png") no-repeat;
+    background-size: contain;
+}
+.umap-style .B1{
+    background: url("../images/B1.png") no-repeat;
+    background-size: contain;
+}
+.umap-style .B2{
+    background: url("../images/B2.png") no-repeat;
+    background-size: contain;
+}
+.umap-style .B3{
+    background: url("../images/B3.png") no-repeat;
+    background-size: contain;
+}
+.umap-style .B4{
+    background: url("../images/B4.png") no-repeat;
+    background-size: contain;
+}
+.umap-style .C1{
+    background: url("../images/C1.png") no-repeat;
+    background-size: contain;
+}
+.umap-style .C2{
+    background: url("../images/C2.png") no-repeat;
+    background-size: contain;
+}
+.umap-style .C3{
+    background: url("../images/C3.png") no-repeat;
+    background-size: contain;
+}
+.umap-style .C4{
+    background: url("../images/C4.png") no-repeat;
+    background-size: contain;
+}
+.umap-style .D1{
+    background: url("../images/D1.png") no-repeat;
+    background-size: contain;
+}
+.umap-style .D2{
+    background: url("../images/D2.png") no-repeat;
+    background-size: contain;
+}
+.umap-style .D3{
+    background: url("../images/D3.png") no-repeat;
+    background-size: contain;
+}
+.umap-style .D4{
+    background: url("../images/D4.png") no-repeat;
+    background-size: contain;
+}
+.umap-style{
+    text-align: center;
+}
+.umap-style>div {
+    color: #42382C;
+    height: 200px;
+    letter-spacing: 0.05em;
+    line-height: 16px;
+    width: 49%;
+}
+.umap-style>div a{
+    display: block;
+    position: relative;
+    width: 136px;
+    height: 166px;
+    margin: 10px auto 0;
+}
+.umap-style>div div {
+    padding-top: 5px;
+}
+
+.umap-style-check{
+    display: none;
+    position: absolute;
+    z-index: 999;
+    right: -7px;
+    background: url("../images/style-check.png") no-repeat;
+    background-size: contain;
+    width: 24px;
+    height: 24px;
+    bottom: 0px;
+}
+.umap-style-check.active{
+    display: block;
+}
+
+/*======================换肤页面 end======================*/
+/*======================日历 start======================*/
+.ui-calendar{
+    padding: 10px;
+    background-color: white;
+    margin: 10px 20px;
+    position: relative;
+}
+.ui-calendar-title{
+    display: block;
+    position: relative;
+    text-align: center;
+    margin: 10px -10px;
+    padding: 15px;
+    background-image: -webkit-gradient(linear, left top, left bottom, from( #059f89), to( #348884 ));
+    background-image: -webkit-linear-gradient( #059f89 , #348884 );
+    background-image:    -moz-linear-gradient( #059f89 , #348884 );
+    background-image:     -ms-linear-gradient( #059f89 , #348884 );
+    background-image:      -o-linear-gradient( #059f89 , #348884 );
+    background-image:         linear-gradient( #059f89 , #348884 );
+    color: white;
+    font-size: 18px;
+}
+.ui-calendar-title span{
+    display: inline-block;
+}
+.ui-calendar-year,.ui-calendar-month{
+    width: 100px;
+    color: #036b7a;
+}
+.ui-calendar-left{
+    float: left;
+    margin: 10px 0px;
+    width: 17px;
+    height: 21px;
+    background: url("../images/arrow-white-l.png") no-repeat;
+    background-size: contain;
+    /*    position: absolute;
+        z-index: 100;
+        left: 0px;
+        top: 20px;
+        height:0px; width:0px;
+        border:15px solid #000; border-color: transparent #fff transparent transparent;*/
+
+}
+.ui-calendar-right{
+    float: right;
+    margin: 10px 0px;
+    width: 14px;
+    height: 21px;
+    background: url("../images/arrow-white-r.png") no-repeat;
+    background-size: contain;
+}
+.ui-calendar-active{
+    color: black;
+    text-shadow: none;
+    font-size: 8px;
+    background-color: #189789;
+    box-shadow:inset 0px 1px 2px 1px #6d6659 ;
+    -moz-box-shadow: inset 0px 1px 2px 1px #6d6659 ;
+    -webkit-box-shadow: inset 0px 1px 2px 1px #6d6659 ;
+}
+.ui-calendar-tabel {
+    border-collapse: collapse;
+    padding: 0;
+    width: 100%;
+    color: #000000;
+}
+.ui-calendar-tabel th{
+    vertical-align:center; 
+    height: 50px;
+    font-size: 14px;
+}
+.ui-calendar-tabel tr:first-child td{
+    border-top-width: 2px; 
+}
+.ui-calendar-tabel tr:last-child td{
+    border-bottom-width: 2px;
+}
+.ui-calendar-tabel tr td:first-child{
+    border-left-width: 2px;
+    background-color: #e9e9e9;
+}
+.ui-calendar-tabel tr td:last-child{
+    border-right-width: 2px;
+    background-color: #e9e9e9;
+}
+.ui-calendar-tabel td {
+    line-height: 1.5em;
+    text-align: left;
+    padding: 0 0.2em;
+    vertical-align:top;
+    height: 40px;
+    border: 1px;
+    border-color: #939393;
+    border-style: solid;  
+}
+.ui-calendar-day{
+
+}
+.ui-calendar-plus{
+    color: #036b7a;
+    float: right;
+}
+/*======================日历 end======================*/
+/*======================对话框 start======================*/
+.ui-dialog{
+    background-color: #e9e9e9;
+    /*display: none;*/
+    position: relative;
+    min-width: 280px;
+    border-radius: .8em;
+    border-color: #e9e9e9;
+    border-width: 5px;
+    box-shadow: 0 0 12px rgba(0,0,0,.6);
+    padding: 2px;
+}
+.ui-dialog-head{
+    width: 100%;
+    min-height: 30px;
+    background: url("../images/dialog-bg.png") no-repeat;
+    background-size: cover;
+}
+.ui-dialog-inner{
+    position: relative;
+    border-radius: inherit;
+    background-color: #0c443f;
+}
+.ui-dialog-text{
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    min-height: 2em;
+    background-color: #0c443f;
+    padding: 5px 10px;
+
+}
+.ui-dialog-text input{
+    color: black;
+}
+.ui-dialog-buttoncontainer{
+    position: relative;
+    border-radius: .3em;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    border: 0;
+}
+.ui-dialog-buttoncontainer span{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.ui-dialog-button{
+    display: block;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: .3em;
+    /*    background-image: -webkit-linear-gradient( #4F9D9D ,#408080, #003E3E,#003E3E);
+        background-image: linear-gradient( #4F9D9D ,#005757, #3D7878,#007979);*/
+    background-image: -webkit-gradient(linear, left top, left bottom, from( #4F9D9D),color-stop(0.3, #005757),color-stop(0.6, #3D7878), to( #007979 ));
+    background-image: -webkit-linear-gradient( #4F9D9D ,#005757, #3D7878,#007979 );
+    background-image:    -moz-linear-gradient( #4F9D9D ,#005757, #3D7878,#007979 );
+    background-image:     -ms-linear-gradient( #4F9D9D ,#005757, #3D7878,#007979 );
+    background-image:      -o-linear-gradient( #4F9D9D ,#005757, #3D7878,#007979 );
+    background-image:         linear-gradient( #4F9D9D ,#005757, #3D7878,#007979 );
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+}
+.ui-dialog-buttoncontainer span:first-of-type{
+    display: inline-block;
+    width: 50%;
+    padding-right: 5px;
+}
+
+.ui-dialog-buttoncontainer span:last-of-type {
+    display: inline-block;
+    width: 50%;
+    padding-left: 5px;
+}
+
+.ui-dialog-buttoncontainer span:only-of-type {
+    width: 100%;
+    padding: 0px;
+}
+.ui-calendar-bar-l,.ui-calendar-bar-r{
+    position: absolute;
+    top: -25px;
+    left: auto;
+    margin: 0px 30px;
+    width: 33px;
+    height: 90px;
+    background: url("../images/calendar-bar.png") no-repeat;
+    background-size: contain;
+}
+/*======================对话框 start======================*/
+/*选择菜单样式*/
+.umap-menu-list
+{              
+    position:absolute;
+    left:5px;
+    top: 35px;
+    min-width: 150px;
+    z-index: 200000;
+    animation: menu-animation-pop 0.5s;
+    -webkit-animation: menu-animation-pop 0.5s;
+}
+
+.umap-menu-list .menu-arrow-a{
+    position: absolute;
+    top: -20px;
+    left: 22px;
+    width: 35px;
+    height: 25px;
+    background: url("../images/menu-arrow-up.png") no-repeat;
+    background-size: 35px;
+    z-index: 1;
+}
+.umap-menu-list .menu-arrow-b{
+    position: absolute;
+    top: -20px;
+    left: 22px;
+    width: 35px;
+    height: 25px;
+    background:url("../images/menu-arrow-down.png") no-repeat;
+    background-size: 35px;
+    z-index: 1;
+}
+.umap-menu-list .menu-arrow-r{
+    position: absolute;
+    top: -20px;
+    left: 22px;
+    width: 25px;
+    height: 35px;
+    background:url("../images/menu-arrow-right.png") no-repeat;
+    background-size: 25px 35px;
+    z-index: 1;
+}
+.umap-menu-list .ui-listview{
+    background-color: #3c3c3c;
+    border-radius: .6em;
+    border: 1px solid #333333;
+    padding:.01em;
+}
+.umap-menu-list .ui-li {
+    height:50px;
+    border-left: 1px solid #949494;
+    border-right: 1px solid #949494;
+    border-top:none;
+    border-bottom: none;
+    padding-left:5px;
+    padding-right: 5px;
+}
+.umap-menu-list .ui-li:first-of-type {
+    border-top: 1px solid #949494;
+    border-top-left-radius: .6em;
+    border-top-right-radius: .6em;
+}
+.umap-menu-list .ui-li:last-of-type {
+    border-bottom: 1px solid #949494;
+    border-bottom-left-radius: .6em;
+    border-bottom-right-radius: .6em;
+}
+.umap-menu-list li a span {
+    display: none;
+}
+.umap-menu-list .ui-li a{
+    border-top: 1px solid #171f21;
+    border-bottom: 1px solid #5b5959;
+    text-align: center;
+    vertical-align: middle;
+    padding:0px;
+    padding-top: 10px;
+    color:#e5e5e5;
+    font-size: 19px;
+    display: block;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.umap-menu-list .ui-li:first-of-type a{
+    border-top: none;
+}
+.umap-menu-list .ui-li:last-of-type a{
+    border-bottom: none;
+}
+.umap-menu-list .ui-li a.active{
+    color: #FFFFFF;
+    background-color: #3c3c3c;
+    background-image: none;
+}
+.menu-hide-panel{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 100001;
+}
+/*图标颤抖样式*/
+.umap-icon-quiver{
+    animation: icon-animation-quiver 0.25s linear 0s infinite;
+    -webkit-animation: icon-animation-quiver 0.25s ease-in-out 0s infinite;
+}
+/*删除图标样式*/
+.umap-icon-recycle{
+    position:absolute;
+    z-index:100004;
+    margin-top: 20px;
+    white-space: nowrap;
+    text-align: center;
+    color: #333333;
+    float: left;
+    width: 25%;
+    -webkit-animation-fill-mode:forwards;  
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+    animation: icon-animation-recycle 1.5s;
+    -webkit-animation: icon-animation-recycle 1.5s;  
+}
+.umap-icon-recycle a{
+    white-space: nowrap;
+}
+.umap-icon-recycle a>.ui-icon-txl{
+    white-space: nowrap;
+}
+.quiver-tool-handler{
+    height: 80px;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-image: -webkit-gradient(linear, left top, left bottom, from( #818181),color-stop(0.3, #6F6F6F),color-stop(0.6, #363636), to( #070707 ));
+    background-image: -webkit-linear-gradient(#818181 ,#6F6F6F, #363636,#070707);
+    background-image:    -moz-linear-gradient( #818181 ,#6F6F6F, #363636,#070707);
+    background-image:     -ms-linear-gradient(#818181 ,#6F6F6F, #363636,#070707);
+    background-image:      -o-linear-gradient( #818181 ,#6F6F6F, #363636,#070707);
+    background-image:         linear-gradient( #818181 ,#6F6F6F, #363636,#070707 );
+    z-index: 100003;
+    opacity: 0.95;
+    animation: icon-animation-tool 0.2s;
+    -webkit-animation: icon-animation-tool 0.2s;  
+}
+.quiver-tool-left{
+    width: 20%;
+    height: 54px;
+    float: left;
+    padding: 25px 15% 0% 15%;
+
+}
+.quiver-tool-right{
+    width: 20%;
+    height: 54px;
+    float: right;
+    padding: 25px 15% 0% 15%;
+
+}
+.quiver-tool-left-del-btn-a{
+    background:url("../images/rubbish-a.png") no-repeat;
+    width: 100%;
+    display: block;
+    height: 30px;  
+    background-position: center;
+    background-position-y: bottom;
+    background-size: 30px;
+}
+.quiver-tool-left-add-btn-a{
+    background:url("../images/preference-a.png") no-repeat;
+    width: 100%;
+    display: block;
+    height: 30px;  
+    background-position: center;
+    background-position-y: bottom;
+    background-size: 30px;
+}
+.quiver-tool-right-btn{
+    background:url("../images/finish-a.png") no-repeat;
+    width: 100%;
+    display: block;
+    height: 30px;  
+    background-position: center;
+    background-position-y: bottom;
+    background-size: 30px;
+}
+.quiver-tool-left-del-btn-b{
+    background:url("../images/rubbish-b.png") no-repeat;
+    width: 100%;
+    display: block;
+    height: 30px;  
+    background-position: center;
+    background-position-y: bottom;
+    background-size: 30px;
+}
+.quiver-tool-left-add-btn-b{
+    background:url("../images/preference-b.png") no-repeat;
+    width: 100%;
+    display: block;
+    height: 30px;  
+    background-position: center;
+    background-position-y: bottom;
+    background-size: 30px;
+}
+.quiver-tool-right-btn:active{
+    background:url("../images/finish-b.png") no-repeat;
+    width: 100%;
+    display: block;
+    height: 30px;  
+    background-position: center;
+    background-position-y: bottom;
+    background-size: 30px;
+}
+.quiver-tool-left-text{
+    width: 100%;
+    text-align: center;
+    display: block;
+    height: 19px; 
+    color: #ffffff;
+    font-size: 11px;
+}
+.quiver-tool-right-text{
+    text-align: center;
+    width: 100%;
+    display: block;
+    height: 19px; 
+    color: #ffffff;
+    font-size: 11px;
+}
+/*图标移动样式*/
+
+.umap-icon-migrant{
+    position:absolute;
+    z-index:100002;
+    margin-top: 20px;
+    white-space: nowrap;
+    text-align: center;
+    color: #333333;
+    float: left;
+    width: 24%;
+
+}
+
+.umap-icon-migrant a{
+    white-space: nowrap;
+}
+.umap-icon-migrant a>.ui-icon-txl{
+    white-space: nowrap;
+}
+/*列表移动样式*/
+.umap-li-migrant{
+    position:absolute;
+    z-index:100002;
+    /*box-shadow: -2px 0px 8px #fff,0px -2px 8px #fff,0px 2px 8px #fff,2px 0px 8px #fff;
+    */
+    box-shadow: -2px 0px 8px #eee,0px -2px 8px #eee,0px 2px 8px #fff,2px 0px 8px #eee;
+    /*animation: li-last-press-animation 0.5s ease-in;
+    -webkit-animation: li-last-press-animation 0.5s ease-in;*/
+    animation: li-last-press-animation 1s ease-in;
+    -webkit-animation: li-last-press-animation 1s ease-in;
+}
+.umap-edit{
+    padding: 10px;
+}
+/*#wrapper {
+position: absolute;
+z-index: 1;
+top: 0px;
+bottom: 0px;
+left: 0;
+width: 100%;
+background: #ccc;
+overflow: hidden;
+}
+#scroller {
+        position: absolute;
+        z-index: 1;
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+        width: 2000px;
+        -webkit-transform: translateZ(0);
+        -moz-transform: translateZ(0);
+        -ms-transform: translateZ(0);
+        -o-transform: translateZ(0);
+        transform: translateZ(0);
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        -webkit-text-size-adjust: none;
+        -moz-text-size-adjust: none;
+        -ms-text-size-adjust: none;
+        -o-text-size-adjust: none;
+        text-size-adjust: none;
+        background: #fff;
+}*/
+/*.ui-progressbar {
+    text-align: left;
+    overflow: hidden;
+    background: url("../images/progressbar-bg.png") no-repeat;
+    background-size: 100% 100%;
+    width: 190px;
+    height: 9px;
+}
+.ui-progressbar .ui-progressbar-value {
+    height: 100%;
+    background: url("../images/progressbar-fg.png") no-repeat;
+    background-size: 100% 100%;
+    background-position: 1px -1px;
+    font-size: 0px;
+    filter:alpha(opacity=50); 
+    -moz-opacity:0.5; 
+    -khtml-opacity: 0.5; 
+    opacity: 0.5; 
+}*/
+.ui-progressbar {
+    text-align: left;
+    overflow: hidden;
+    width: 300px;
+    height: 12px;
+    padding: 2px;
+    border-radius: 8px;
+    border: 1px #000000;
+    background-image: -webkit-gradient(linear, left top, left bottom, from( #181818), to( #000000 ));
+    background-image: -webkit-linear-gradient(#181818 ,#000000);
+    background-image:    -moz-linear-gradient(#181818 ,#000000);
+    background-image:     -ms-linear-gradient(#181818 ,#000000);
+    background-image:      -o-linear-gradient(#181818 ,#000000);
+    background-image:         linear-gradient(#181818 ,#000000);
+    box-shadow: 0 1px 1px rgba(255,255,255,0.06) inset,0 3px 8px rgba(0,0,0,0.48);;
+}
+.ui-progressbar .ui-progressbar-value {
+    height: 100%;
+    border-radius: 8px;
+    /*margin: 1px;*/
+    background-image: -webkit-gradient(linear, left top, left bottom, from( #ff9784), to( #a22019 ));
+    background-image: -webkit-linear-gradient(#ff9784 ,#a22019);
+    background-image:    -moz-linear-gradient(#ff9784 ,#a22019);
+    background-image:     -ms-linear-gradient(#ff9784 ,#a22019);
+    background-image:      -o-linear-gradient(#ff9784 ,#a22019);
+    background-image:         linear-gradient(#ff9784 ,#a22019);
+    font-size: 0px;
+    box-shadow: 0 1px 1px rgba(255,255,255,0.6) inset;
+}
+.ui-pagination-indicator {
+    position: relative;
+    width: 15px;
+    height: 10px;
+    margin: 0 auto;
+    background: url("../images/indicator.png");
+    background-size: 15px 10px;
+    margin-top: -25px;
+}
+.ui-pagination-indicator>* {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background: #777;
+}
+.pagination-title{
+    position: relative;
+    margin-top: -47px;
+    width: 100%;
+    background-color: rgba(0,0,0,0.3);
+    height: 43px;
+    padding-left: 11px;
+    padding-top: 5px;
+    color: white;
+    display: block;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+img.ui-scroller{
+    background-color: white;
+}
+.find-more{
+    border-top: 1px solid #c9c9c9;
+    text-align: center;
+    font-size: 18px;
+    display: none;
+    border-top-color: #e2e1dd;
+}
+.find-more.hide{
+    display: none;
+}
+.find-more.show{
+    display: block;
+}
+.ui-pull-down{
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -moz-box;
+    display: box;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    box-pack: center;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    box-align: center;
+    -ms-flex-pack: center;
+    -ms-flex-align: center;
+}
+.ui-body.ui-with-navigator~ .ui-pull-down{
+    top: 44px;
+}
+.ui-pull-up{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    /*text-align: center;*/
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -moz-box;
+    display: box;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    box-pack: center;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    box-align: center;
+    -ms-flex-pack: center;
+    -ms-flex-align: center;
+}
+
+.ui-pull-up .pullUpIcon, .ui-pull-down .pullDownIcon{
+    background-image: url("../images/pull_to_refresh.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 24px;
+    width: 24px;
+    float: left;
+    position: relative;
+    margin-top: 2px;
+    -webkit-transition-property: -webkit-transform;
+    -ms-transition-property: -webkit-transform;
+    transition-property: transform;
+    -webkit-transition-duration: 250ms;
+    -ms-transition-duration: 250ms;
+    transition-duration: 250ms;
+}
+
+.ui-pull-up .pullUpIcon{
+    -webkit-transform: rotate(-180deg) translateZ(0);
+    -ms-transform: rotate(-180deg) translateZ(0);
+}
+
+.ui-pull-up.flip .pullUpIcon{
+    -webkit-transform: rotate(-360deg) translateZ(0);
+    -ms-transform: rotate(-360deg) translateZ(0);
+}
+
+.ui-pull-down .pullDownIcon{
+    -webkit-transform: rotate(0) translateZ(0);
+    -ms-transform: rotate(0) translateZ(0);
+}
+
+.ui-pull-down.flip .pullDownIcon{
+    -webkit-transform: rotate(-180deg) translateZ(0);
+    -ms-transform: rotate(-180deg) translateZ(0);
+}
+
+ .ui-body.ui-with-footer~ .ui-pull-up{
+    bottom: 44px;
+ }
+
+ div.toast{
+    height: 23px;
+    width: 129px;
+    background-color: rgba(0,0,0,0.7);
+    position: absolute;
+    bottom: 80px;
+    color: white;
+    border-radius: 5px;
+    padding: 8px;
+    left: 50%;
+    margin-left: -66px;
+    z-index: 10000000;
+}
+
+.circle .ui-pagination-indicator{
+    margin-top: 0px;
+    margin-left: -15px;
+}
+
+.circle{
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    height: 10px;
+    margin-top: -25px;
+}
